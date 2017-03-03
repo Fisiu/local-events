@@ -78,4 +78,17 @@ return [
     'pagination'    => [
         'range'  => 'Showing :first to :last of :total entries',
     ],
+
+    'events'        => [
+        'header' => 'Wydarzenia',
+        'index'     => [
+            'description' => 'Przegląd',
+        ],
+        'create'    => [
+            'description' => 'Tworzenie',
+        ],
+        'edit'    => [
+            'description' => 'Edycja',
+        ],
+    ],
 ];
