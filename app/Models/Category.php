@@ -12,4 +12,9 @@ class Category extends Model
     protected $table = 'le_categories';
 
     protected $fillable = ['name', 'color'];
+
+    public function events()
+    {
+        return $this->belongsToMany('App\Models\Event', 'le_category_event');
+    }
 }

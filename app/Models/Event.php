@@ -12,4 +12,9 @@ class Event extends Model
     protected $table = 'le_events';
 
     protected $fillable = ['title', 'description', 'start_time', 'end_time', 'url', 'image', 'place'];
+
+    public function categories()
+    {
+        return $this->belongsToMany('App\Models\Category', 'le_category_event');
+    }
 }
