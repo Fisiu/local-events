@@ -13,5 +13,6 @@ Route::group([
     $router->get('/', 'HomeController@index');
     $router->resource('events', EventController::class);
     $router->resource('organizers', OrganizerController::class);
+    $router->resource('categories', CategoryController::class);
 
 });

@@ -5,7 +5,7 @@ return [
     'login'                 => 'Login',
     'logout'                => 'Logout',
     'setting'               => 'Setting',
-    'name'                  => 'Name',
+    'name'                  => 'Nazwa',
     'username'              => 'Username',
     'password'              => 'Password',
     'password_confirmation' => 'Password confirmation',
@@ -79,8 +79,9 @@ return [
         'range'  => 'Showing :first to :last of :total entries',
     ],
 
-    'events'        => [
-        'header' => 'Wydarzenia',
+    'color'         => 'Kolor',
+
+    'models'        => [
         'index'     => [
             'description' => 'Przegląd',
         ],
@@ -89,6 +90,17 @@ return [
         ],
         'edit'    => [
             'description' => 'Edycja',
+        ],
+    ],
+
+    'events'        => [
+        'header' => 'Wydarzenia',
+    ],
+    'categories'    => [
+        'header' => 'Kategorie',
+        'placeholder' => [
+            'name' => 'Nazwa kategorii',
+            'color' => '#000000'
         ],
     ],
 ];
