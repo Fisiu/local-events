@@ -12,4 +12,9 @@ class Organizer extends Model
     protected $table = 'le_organizers';
 
     protected $fillable = ['name', 'logo', 'url'];
+
+    public function events()
+    {
+        return $this->belongsToMany('App\Models\Event', 'le_event_organizer');
+    }
 }

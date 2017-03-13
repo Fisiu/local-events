@@ -17,4 +17,9 @@ class Event extends Model
     {
         return $this->belongsToMany('App\Models\Category', 'le_category_event');
     }
+
+    public function organizers()
+    {
+        return $this->belongsToMany('App\Models\Organizer', 'le_event_organizer');
+    }
 }
