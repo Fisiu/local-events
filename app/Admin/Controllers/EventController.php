@@ -3,6 +3,7 @@
 namespace App\Admin\Controllers;
 
 use App\Models\Event;
+use App\Models\Category;
 
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
@@ -90,6 +91,10 @@ class EventController extends Controller
         return Admin::form(Event::class, function (Form $form) {
 
             $form->display('id', 'ID');
+
+            $form->text('title');
+            $form->editor('description');
+            $form->multipleSelect('categories')->options(Category::all()->pluck('name', 'id'));
 
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
